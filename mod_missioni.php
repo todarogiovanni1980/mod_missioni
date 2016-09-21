@@ -2,6 +2,6 @@
 //don't allow other scripts to grab and execute our file
 defined('_JEXEC') or die('Direct Access to this location is not allowed.');
 ?>
-<h1>
-    Ultime Missioni
-</h1>
+<p>
+    Visualizza le Ultime Missioni secondo le impostazioni del modulo.
+</p>
