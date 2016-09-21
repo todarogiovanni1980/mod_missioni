@@ -37,7 +37,22 @@
     <!-- Optional parameters -->
 	<params>
         	<!-- parameter to allow placement of a module class suffix for the module table / xhtml display -->
-		<param name="protocollare" type="text" default="1" label="Protocollare ?" description="Scegliere quali missioni si vuole vedere da protocollare da firmare oppure da rimborsare" />
+		<param name="protocollare" type="radio" default="1" label="da Protocollare ?" description="Scegliere se mostrare le missioni ancora da protocollare" >
+			<option value="0">No</option>
+			<option value="1">Si</option>
+		</param>
+		
+		<!-- parameter to allow placement of a module class suffix for the module table / xhtml display -->
+		<param name="firmare" type="radio" default="1" label="da Firmare ?" description="Scegliere se mostrare le missioni ancora da firmare" >
+			<option value="0">No</option>
+			<option value="1">Si</option>
+		</param>
+		
+		<!-- parameter to allow placement of a module class suffix for the module table / xhtml display -->
+		<param name="firmare" type="radio" default="1" label="da Rimborsare ?" description="Scegliere se mostrare le missioni ancora da rimborsare" >
+			<option value="0">No</option>
+			<option value="1">Si</option>
+		</param>
  
         	<!-- just gives us a little room between the previous parameter and the next -->
 		<param name="@spacer" type="spacer" default="" label="" description="" />
