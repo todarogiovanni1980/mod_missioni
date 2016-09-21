@@ -7,5 +7,5 @@ $missionsCount = $params->get('missionscount');
 ?>
 
 <p>
-    Visualizza le Ultime <?php echo $missionsCount; ?>Missioni secondo le impostazioni del modulo.
+    Visualizza le Ultime <?php echo $missionsCount; ?> Missioni secondo le impostazioni del modulo.
 </p>
