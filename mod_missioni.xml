@@ -52,7 +52,7 @@
 		</param>
 		
 		<!-- parameter to allow placement of a module class suffix for the module table / xhtml display -->
-		<param name="firmare" type="radio" default="1" label="da Rimborsare ?" description="Scegliere se mostrare le missioni ancora da rimborsare" >
+		<param name="rimborsare" type="radio" default="1" label="da Rimborsare ?" description="Scegliere se mostrare le missioni ancora da rimborsare" >
 			<option value="0">No</option>
 			<option value="1">Si</option>
 		</param>
