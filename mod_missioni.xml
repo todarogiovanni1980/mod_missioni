@@ -22,7 +22,7 @@
 	<authorUrl>www.pa.itd.cnr.it</authorUrl> 
  
     <!-- Module version number -->
-	<version>0.0.3</version> 
+	<version>0.0.4</version> 
  
     <!-- Description of what the module does -->
 	<description>Visualizza le ultime missioni inserite ancora da protocollare e firmare</description>
@@ -32,6 +32,9 @@
         <!-- The "module" attribute signifies that this is the main controller file -->
 		<filename module="mod_missioni">mod_missioni.php</filename>
 		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
 	</files>
  
     <!-- Optional parameters -->
