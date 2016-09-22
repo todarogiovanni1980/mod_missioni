@@ -20,7 +20,7 @@ class ModMissioniHelper
         $db = &JFactory::getDBO();
  
         // get a list of $userCount randomly ordered users 
-        $query = "SELECT a.numero, a.data, a.filemissionefirmata, a.protocollo, a.rimborso FROM presenzeitd.missioni AS a $filtro ORDER BY a.data  LIMIT $missionsCount "; 
+        $query = "SELECT a.numero, a.data, a.filemissionefirmata, a.protocollo, a.rimborso, a.idmissione FROM presenzeitd.missioni AS a $filtro ORDER BY a.data  LIMIT $missionsCount "; 
         $db->setQuery($query);
         $items = ($items = $db->loadObjectList())?$items:array();
  
