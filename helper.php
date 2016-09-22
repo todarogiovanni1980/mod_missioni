@@ -6,13 +6,14 @@ class ModMissioniHelper
     /**
      * Returns a list of missions items
     */
-    public function getItems($missionsCount, $protocollare, $firmare, $rimborsare)
+    public function getItems($missionsCount, $protocollare, $firmare, $rimborsare, $data)
     {
         $filtro = "";
         
         if ($protocollare) $filtro .= " a.protocollo=''";
         if ($firmare) $filtro .= " or a.filemissionefirmata=''";
         if ($rimborsare) $filtro .= " or a.rimborso=''";
+        if ($data) $filtro .= " or a.data>=$data";
         if ($filtro) $filtro = "where $filtro";
         
         // get a reference to the database
