@@ -16,7 +16,7 @@
 		width="16" height="16" border="0"
 		alt="<?php echo ( $item->filemissionefirmata ) ? JText::_( "Firmata " . $item->filemissionefirmata ) : JText::_( 'da firmare' );?>" />
 	
-	<?php echo $item->numero ." del ". $item->data ; ?>
+	<?php echo $item->numero ." del ". JHTML::_('date', $item->data, JText::_('DATE_FORMAT_LC5')) ; ?>
     </li>
     <?php } ?>
 </ul>
