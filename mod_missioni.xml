@@ -22,7 +22,7 @@
 	<authorUrl>www.pa.itd.cnr.it</authorUrl> 
  
     <!-- Module version number -->
-	<version>0.0.4</version> 
+	<version>0.0.5</version> 
  
     <!-- Description of what the module does -->
 	<description>Visualizza le ultime missioni inserite ancora da protocollare e firmare</description>
