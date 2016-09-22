@@ -6,14 +6,20 @@ class ModMissioniHelper
     /**
      * Returns a list of missions items
     */
-    public function getItems($missionsCount)
+    public function getItems($missionsCount, $protocollare, $firmare, $rimborsare)
     {
+        $filtro = "";
+        
+        if ($protocollare) $filtro .= " a.protocollo=''";
+        if ($firmare) $filtro .= " or a.filemissionefirmata=''";
+        if ($rimborsare) $filtro .= " or a.rimborso=''";
+        if ($filtro) $filtro = "where $filtro";
+        
         // get a reference to the database
         $db = &JFactory::getDBO();
  
         // get a list of $userCount randomly ordered users 
-        $query = "SELECT a.numero, a.data, a.filemissionefirmata, a.protocollo FROM presenzeitd.missioni AS a where a.protocollo='' ORDER BY a.data DESC LIMIT $missionsCount ";
- 
+        $query = "SELECT a.numero, a.data, a.filemissionefirmata, a.protocollo, a.rimborso FROM presenzeitd.missioni AS a $filtro ORDER BY a.data DESC LIMIT $missionsCount "; 
         $db->setQuery($query);
         $items = ($items = $db->loadObjectList())?$items:array();
  
