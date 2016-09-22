@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+    <!-- Name of the Module -->
+	<name>Ultime Missioni</name> 
+ 
+    <!-- Name of the Author -->
+	<author>Todaro Giovanni</author> 
+ 
+    <!-- Version Date of the Module -->
+	<creationDate>2016-09-22</creationDate> 
+ 
+    <!-- Copyright information -->
+	<copyright>All rights reserved by Ambitionality Software LLC 2008.</copyright> 
+ 
+    <!-- License Information -->
+	<license>GPL 2.0</license> 
+ 
+    <!-- Author's email address -->
+	<authorEmail>giovanni.todaro@pa.itd.cnr.it</authorEmail> 
+ 
+    <!-- Author's website -->
+	<authorUrl>www.pa.itd.cnr.it</authorUrl> 
+ 
+    <!-- Module version number -->
+	<version>1.0.0</version> 
+ 
+    <!-- Description of what the module does -->
+	<description>Visualizza le ultime missioni inserite ancora da protocollare e firmare</description>
+ 
+    <!-- Listing of all files that should be installed for the module to function -->
+	<files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+		<filename module="mod_missioni">mod_missioni.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+ 
+    <!-- Optional parameters -->
+	<params>
+        	<!-- parameter to allow placement of a module class suffix for the module table / xhtml display -->
+		<param name="protocollare" type="radio" default="1" label="da Protocollare ?" description="Scegliere se mostrare le missioni ancora da protocollare" >
+			<option value="0">No</option>
+			<option value="1">Si</option>
+		</param>
+		
+		<!-- parameter to allow placement of a module class suffix for the module table / xhtml display -->
+		<param name="firmare" type="radio" default="1" label="da Firmare ?" description="Scegliere se mostrare le missioni ancora da firmare" >
+			<option value="0">No</option>
+			<option value="1">Si</option>
+		</param>
+		
+		<!-- parameter to allow placement of a module class suffix for the module table / xhtml display -->
+		<param name="rimborsare" type="radio" default="1" label="da Rimborsare ?" description="Scegliere se mostrare le missioni ancora da rimborsare" >
+			<option value="0">No</option>
+			<option value="1">Si</option>
+		</param>
+ 
+        	<!-- just gives us a little room between the previous parameter and the next -->
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+ 
+        	<!-- A parameter that allows an administrator to modify the number of missions that this module will display -->
+        	<param name="missionscount" type="text" default="5" label="Numero di missioni da visualizzare" description="il numero massimo di missioni da visualizzare " />
+        	
+        	<!-- A parameter that allows an administrator to modify the date of missions that this module will display -->
+        	<param name="data" type="calendar" default="" label="Seleziona una data" description="il numero massimo di missioni da visualizzare " />
+        	
+    	</params>
+</install>
