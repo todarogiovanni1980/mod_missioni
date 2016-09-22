@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <install type="module" version="1.5.0">
     <!-- Name of the Module -->
-	<name>Modulo Missioni</name> 
+	<name>Ultime Missioni</name> 
  
     <!-- Name of the Author -->
 	<author>Todaro Giovanni</author> 
@@ -22,7 +22,7 @@
 	<authorUrl>www.pa.itd.cnr.it</authorUrl> 
  
     <!-- Module version number -->
-	<version>0.0.6</version> 
+	<version>0.0.7</version> 
  
     <!-- Description of what the module does -->
 	<description>Visualizza le ultime missioni inserite ancora da protocollare e firmare</description>
