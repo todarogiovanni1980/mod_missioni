@@ -13,14 +13,14 @@ class ModMissioniHelper
         if ($protocollare) $filtro .= " a.protocollo=''";
         if ($firmare) $filtro .= " or a.filemissionefirmata=''";
         if ($rimborsare) $filtro .= " or a.rimborso=''";
-        if ($data) $filtro .= " or a.data>=$data";
-        if ($filtro) $filtro = "where $filtro";
+        if ($data) $filtrodata = " a.data>='$data'"; 
+        if ($filtro) $filtro = "where ($filtro) and ($filtrodata) ";
         
         // get a reference to the database
         $db = &JFactory::getDBO();
  
         // get a list of $userCount randomly ordered users 
-        $query = "SELECT a.numero, a.data, a.filemissionefirmata, a.protocollo, a.rimborso FROM presenzeitd.missioni AS a $filtro ORDER BY a.data DESC LIMIT $missionsCount "; 
+        $query = "SELECT a.numero, a.data, a.filemissionefirmata, a.protocollo, a.rimborso FROM presenzeitd.missioni AS a $filtro ORDER BY a.data  LIMIT $missionsCount "; 
         $db->setQuery($query);
         $items = ($items = $db->loadObjectList())?$items:array();
  
