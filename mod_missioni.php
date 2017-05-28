@@ -2,6 +2,12 @@
 //don't allow other scripts to grab and execute our file
 defined('_JEXEC') or die('Direct Access to this location is not allowed.');
 
+jimport('joomla.application.component.helper');
+if (!JComponentHelper::isEnabled('com_presenze', true))
+{
+  JError::raiseError('500', JText::_('COMPONENTMISSING'));
+}
+
 // get a parameter from the module's configuration
 $missionsCount = $params->get('missionscount');
 $firmare = $params->get('firmare');
