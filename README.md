@@ -1,4 +1,4 @@
-# mod_missioni
+# Modulo Missioni
 Modulo per Joomla! 1.5 per visualizzare delle ultime n (numero configurabile) missioni ancora da protocollare firmare o rimborsare.
 
 Questo modulo si integra con l'estensione componente com_presenze per la gestione delle presenze del personale.
