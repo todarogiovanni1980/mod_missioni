@@ -3,4 +3,4 @@ Modulo per Joomla! 1.5 per visualizzare le ultime n (numero configurabile) missi
 
 Questo modulo si integra con l'estensione componente com_presenze per la gestione delle presenze del personale.
 
-Si configura attraverso dei parametri sul back-end dove puoi decidere quali missioni vuoi vedere e quante oltre la data.
+Si configura attraverso dei parametri sul back-end dove puoi decidere quali missioni vuoi vedere (se protocollate, firmate e/o rimborsate) e quante (numero di missioni da visualizzare) a partire da una data se la data non viene indicata allora vengono visualizzate tutte.
