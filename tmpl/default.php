@@ -1,5 +1,5 @@
 <?php defined('_JEXEC') or die('Restricted access'); // no direct access ?>
-<?php if (count($items)){ ?>
+<?php if (count($items)): ?>
 <ul>
     <?php foreach ($items as $item) { 
     $url = "<a href='index.php?option=com_presenze&view=missione&missione=".$item->idmissione."'>";
@@ -23,6 +23,6 @@
     <?php } ?>
 </ul>
 
-<?php } else { ?>
+<?php elseif: ?>
 	<blockquote>non ci sono missioni da lavorare... </blockquote>
-<?php } ?>
+<?php endif; ?>
