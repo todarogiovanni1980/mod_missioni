@@ -24,5 +24,5 @@
 </ul>
 
 <?php elseif: ?>
-	<blockquote>non ci sono missioni da lavorare... </blockquote>
+<blockquote>non ci sono missioni da lavorare... </blockquote>
 <?php endif; ?>
