@@ -8,19 +8,19 @@ class ModMissioniHelper
     */
     public function getItems($missionsCount, $protocollare, $firmare, $rimborsare, $data)
     {
-        $filtro = "";
-        
-        if ($protocollare) $filtro .= " a.protocollo=''";
-        if ($firmare) $filtro .= " or a.filemissionefirmata=''";
-        if ($rimborsare) $filtro .= " or a.rimborso=''";
-        if ($data) $filtrodata = " a.data>='$data'"; 
-        if ($filtro) $filtro = "where ($filtro) and ($filtrodata) ";
-        
+        // Prepare the WHERE clause
+        $where = array();
+        if ($protocollare) $where[] = " a.protocollo IS NULL ";
+        if ($firmare) $where[] = " a.filemissionefirmata IS NULL ";
+        if ($rimborsare) $where[] = " a.rimborso IS NULL ";
+        $filtro =   (count($where)) ? ' WHERE ('.implode(' OR ', $where).')'  : '';
+        if ($data && $filtro) $filtro .= " and a.data>='$data' ";
+
         // get a reference to the database
         $db = &JFactory::getDBO();
  
         // get a list of items 
-        $query = "SELECT a.numero, a.data, a.filemissionefirmata, a.protocollo, a.rimborso, a.idmissione FROM #__presenze_missioni AS a $filtro ORDER BY a.data  LIMIT $missionsCount "; 
+        $query = "SELECT * FROM #__presenze_missioni AS a $filtro ORDER BY a.data  LIMIT $missionsCount "; 
         $db->setQuery($query);
         $items = ($items = $db->loadObjectList())?$items:array();
  
