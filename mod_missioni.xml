@@ -7,7 +7,7 @@
 	<author>Todaro Giovanni</author>
 
     <!-- Version Date of the Module -->
-	<creationDate>2017-11-06</creationDate>
+	<creationDate>2017-11-14</creationDate>
 
     <!-- Copyright information -->
 	<copyright>All rights reserved by Ambitionality Software LLC 2008.</copyright>
@@ -22,7 +22,7 @@
 	<authorUrl>www.pa.itd.cnr.it</authorUrl>
 
     <!-- Module version number -->
-	<version>1.0.2</version> 
+	<version>1.1.0</version> 
 
     <!-- Description of what the module does -->
 	<description>Visualizza le ultime missioni inserite ancora da protocollare e firmare</description>
